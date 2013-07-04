@@ -327,9 +327,6 @@
     
     if([_delegate respondsToSelector:@selector(banBu_SmileView:didInputSmile:isDelete:type:)])
         [_delegate banBu_SmileView:self didInputSmile:inputStr isDelete:NO type:1];
-    
-    
-
 }
 
 - (void)btnPressed:(UIButton *)button

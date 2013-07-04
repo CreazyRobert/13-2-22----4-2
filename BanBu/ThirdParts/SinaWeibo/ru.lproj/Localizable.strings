@@ -1,0 +1,689 @@
+
+
+"发送" = "Send";
+
+"关闭" = "Cancel";
+
+"新浪微博" = "Sina Weibo";
+
+"确定" = "OK";
+
+"请输入微博内容" = "Please input here";
+
+"取消" = "Cancel";
+
+"登录" = "Log In";
+
+"用户名" = "Username";
+
+"密码" = "Password";
+
+/*******************************************************************************/
+CFBundleDisplayName = "Halfeet";
+
+"savesucess" = "Успешно сохранены";
+"savefail" = "Не удалось сохранить";
+
+/*************************************/
+"nextButton" = "Далее";
+"finishButton" = "Завершено";
+"deleteButton" = "Удалить";
+"saveButton" = "Сохранить";
+"clearButton" = "Очистить";
+"profileButton"="его блог";
+"sortButton" = "Выбрать";
+"returnButton" = "Назад";
+"changeNotice" = "Ваш выбор не может быть изменён после представления";
+"noticeNotice" = "Уведомление";
+"cancelNotice" = "Отменить";
+"confirmNotice" = "Подтверждать";
+"uploadFailNotice" = "Сбой загрузки";
+"chuliNotice" = "Обработка……";
+
+//############
+"deleteNotice" = "Deleting……";
+//#########
+
+"profileAlertNotice" = "Вы изменили информацию на аватар , хотите сохранить?";
+//获取数据失败、请求数据异常。
+"network_error" = "Не удалось получить данные";
+"data_error" = "Запрос данных не удался";
+"network_unavailabel" = "В настоящий момент сеть недоступна, пожалуйста повторите позже";
+
+//关于刷新的
+"loadingNotice" = "Загрузка…..";
+"loadMoreButton" = " Нажмите для получения дополнительной информации";
+"lastRefresh" = "Последние обновления";
+"loosenRefresh" = "Отпустить для обновления";
+"pulldownRefresh" = "Потянуть в низ для обновления";
+/*************************************/
+//BanBu_AppDelegate
+"luckPeopleTitle" = "вокруг толпа";
+"selectTitle" = "Hастройки";
+"broadcastTitle" = "вокруг площадь";
+"dialogueTitle" = " Диалог";
+"myFriendTitle" = "Круг друзей";
+"mySpaceTitle" = "Мой блог";
+"pinglunNotice" = " Если вы предпочитаете использовать Полшага, не возпажаете ли вы потратить минутку на оценивание? Это не займёт у вас больше минуты, спасибо вам за поддержку.";
+
+//"luckPeopleTitle" = "People nearby";
+//"broadcastTitle" = "Post nearby";
+//"selectTitle" = "Throwing ball";
+//"mySpaceTitle" = "My home";
+
+//未登录、登录、注册界面
+/**********************************************/
+//BanBu_UserAgreement
+"userAgreeTitle" = " Соглашение пользователя";
+//BanBu_UnloginedController
+"fristTitle" = "Halfeet";
+"regButton"  = "реестр";
+"logButton" = "Войти";
+
+//######
+"scanButton" = "Visitor";
+//##########
+"nearPeople" = " Люди поблизости";
+"pinglunTitle" = "Оценить Полушаг";
+
+"propagandaTitle" = "Сеть Halfeet: знакомства с людьми";
+"openPush" = "Уведомления закрыты";
+"howOpenPush" = "Полшага открывается только при получении сообщения, для приема уведомлений, посетите Настройки> Уведомления> Полшага";
+
+"laterButton" = "Позже";
+"newButton" = " Hемедленная оценка";
+//BanBu_LoginViewController
+"loginTitle" = "Войти";
+"userNameLabel" = "Номер";
+"userPlabeholder" = "Почтовый ящик или номер Полшага";
+"pwPlaceholder" = "Пожалуйста, введите пароль Halfeet";
+"loading" = " Загрузка….";
+"userNameNil" = "Введите номер пользователя";
+"passWordError" = "Пожалуйста, введите пароль";
+"userNameOrpassWordError" = " Имя или пароль неверный";
+//注册
+/**********************************************/
+
+//BanBu_RegViewController
+"regTitle" = "Регестрация";
+"emailLabel" = "Адрес электронной почты";
+"passwordLabel" = "Пароль";
+"pPlaceholder" = "Не меньше 6 знаков";
+"confirmationLabel" = "Повторите пароль";
+"cPlaceholedr" = "Ещё раз введите пароль";
+"bottomNotice" = "\n почта при получении пароля  является единственным доказательством, убедитесь, что ваш почтовый ящик эффективный и заполнен правильно. \n Для регистрации, вы соглашаетесь с Пользователем  Halfeet";
+"errorMsg" = "Введите адресс электронной почты";
+"errorMsg1" = "Введите правильный адресс электронной почты";
+"errorMsg2" = "Введите пароль";
+"errorMsg3" = "Пароль должен быть не менее шести знаков";
+"errorMsg4" = "Повторите пароль";
+"errorMsg5" = "Пароли не совпадают";
+"detectEmail" = "Обновление сообшения";
+"successEmail" = " Поздравляю, почтовый ящик доступен";
+"failEmail" = "К сожалению, почтовый ящик был зарегистрирован";
+//BanBu_NameAndSexController
+"nameAndSexTitle" = "Имя и Пол";
+"nameLabel" = "Ваше имя";
+"nameNotice" = "Используя настоящие имя люди быстрее найдут вас";
+"namePlaceholder" = "Введите ваше имя";
+"boyItem" = "    Мужской ♂    ";
+"girlItem" = "    Женский ♀    ";
+"selectSex" = "Ваш пол ";
+"editSex" = "Изменить";
+"boy" = "Мужской";
+"girl" = "Женский";
+//BanBu_BloodTypeAndHeightController
+"bodyAndBloodTitle" = "Тело и группа крови";
+"heightLabel" = "Ваш рост (cm)";
+"bloodLabel" = "Группа крови";
+"wightLabel" = "Ваш вес";
+//BanBu_BirthdayViewController
+"birthdayTitle" = " День рождения";
+"ageLabel" = "Возвраст";
+"starLabel" = "Знак зодиака";
+"birthNotice" = "Введите дату своего рождения, система автоматически рассчитает возраст и знак зодиака. Дату рождения не будет отображаться в профайле. Это приложение требует от вас свыше 12 лет";
+"ageNumber" = "Возвраст";
+"ageNotice" = "Введите ваш возвраст";
+"starItem" = "Водолей";
+"starItem1" = "Рыбы";
+"starItem2" = "Овен";
+"starItem3" = "Телец";
+"starItem4" = "Близнецы";
+"starItem5" = "Рак";
+"starItem6" = "Лев";
+"starItem7" = "Дева";
+"starItem8" = "Весы";
+"starItem9" = "Скорпион";
+"starItem10" = "Стрелец";
+"starItem11" = "Козерог";
+//BanBu_SetAvatarViewController
+"avatarTitle" = "Выбрать картинку";
+"btnXiangCe" = "Выберите фото";
+"btnCamera" = "фотография";
+"sendAvater" = "Загрузить фотографию";
+"selectAvater" = "Пожалуйста, выберите фото";
+"registering" = "Идёт регистрация……";
+"getMessage" = "Идёт получение данных";
+"reUpload" = "Повторно загрузить";
+"waitauditNotice" = "Фото загружено успешно";
+/**********************************************/
+
+/**********************************************/
+
+//附近的人和广播
+/**********************************************/
+//BanBu_ListViewController
+"titleItem" = "вокруг толпа";
+"titleItem1" = "вокруг площадь";
+"listTitle" = "Только девушки";
+"listTitle1" = "Только парни";
+"listTitle2" = "Все";
+"listButton" = "Отправить";
+"distanceLabel" = "Он-лайн";
+"intimeLabel" = "Опубликовано";
+"commendLabel" = "Комментировать";
+"reportLabel" = "Сообщить";
+"reportNotice" = "Отчет был представлен";
+"tipNotice" = "Ваша позиция была расположена";
+"tipNotice1" = "В связи с факторами окружающей среды и условий сети, позиция о расположении не удалась";
+"noticeLabel" = "Поблизости нету людей, попытайтесь страницу потянуть в низ для поиска людей";
+"noticeLabel1" = "Поблизости нету трансляций, поскорее опубликуйте";
+//动态详情页面
+//BanBu_DynamicDetailsController
+"replyTime" = "Ответить";
+"replyTitle" = "Ответить";
+"footLabel" = "Нет не одного комментария, написать комментарии";
+//BanBu_ReplyViewController
+"sendReply" = "Послать";
+"sendingNotice" = "Идёт отправка";
+
+//BanBu_GreetingViewController
+"requestUser" = "Запрос в друзья";
+"saywhat" = "Поздороваться";
+"confirmFriend" = " Подтвердить запрос";
+"sendS" = "Успешно отправлено";
+"sendF" = "Отправка не удалась";
+
+//别人的资料
+//BanBu_PeopleProfileController
+"displayPeopleProfile" = "Персональная информация";
+"displayPeopleNews" = "Его новости";
+"relationshipLabel" = "Взаимосвязь";
+"writeMessage" = "Начать разговор";
+"addLink" = "      Добавит";
+"delLink" = "      Отменить";
+"pullBlackReport" = "вариант";
+"friendShip" = "внимание";
+"friendShip1" = "Кумиры";
+"friendShip2" = "Друзья";
+"friendShip3" = "Черный список";
+"friendShip4" = "Незнакомые люди";
+"friendShip5" = "Сам(a)";
+"aliasAction" = "Добавить заметки";
+"pullBlackTitle" = "Черный список";
+"pullBlackAndReport" = "Чёрный список и заблокировать";
+"viewBlackList" = "Просмотреть черный список";
+"linkButton" = " Уверены что хотите уделить внимание?";
+"unlinkButton" ="Отменить";
+"linkSuccess" = "  Добавлено ";
+"unlinkSuccess" = "  Отменить  ";
+"badMessage" = " Обеспокающяя информация";
+"badMessage1" = "Порнография";
+"badMessage2" = " Профиль неуместeн";
+"badMessage3" = "Украсть другую информацию";
+"badDetailMessage" = "Пожалуйста, введите конкретные причины";
+"reportUser" = "Доложить пользователям";
+"submitButton" = "Отправить";
+"pullBlackOK" = "Успешно внесён в черный список";
+"blackAndReportOK" = "Успешно сообщено и внесён в черный список";
+"addFriend" = "Добавить в друзья?";
+
+//BanBu_NoteView
+"editNote" = "Изменить примечание";
+"aliasPlaceholder" = "Пожалуйста, введите имя";
+"originalName" = "Настоящее имя";
+"addNote" = "Изменить примечание имя";
+
+//BanBu_ReleaseController
+"releaseTitle" = "Отправить оповещание";
+"sayRelease" = "Рассказать о своём настроении";
+"fenLabel" = "Поделиться на социальных сайтах";
+"sendNow" = "Сразу отправить";
+"locationNotice" = "Данные о местоположении загружены";
+"sinaBing" ="Подключено кTwitter";
+"TXBing" = "Подключено к Facebook";
+"UnsinaBing" ="Не подключено к Twitter";
+"UnTXBing" = " Не подключено к Facebook";
+"shareToSina" = "Поделиться на twitter";
+"shareToTX" = "Поделиться на Facebook";
+"isSendBro" = "Вы уверены, что хотите опубликовать";
+"contentNil" = "Нет текстовой информации";
+"oneImage" = "Обязательно должна быть картинка";
+
+"releaseSuccess" = "Содержание отослано, пожалуйста подождите";
+
+"isAgreeNotice" = "Прочитал и согласен с соглашением Halfeet";
+"aStr" = "Я прочитал и согласен";
+"bStr" = "Соглашения пользователя с программой Halfeet";
+"seqingNotice" = " В случяе отправки непристойной информации, телефон будет заблокирован и вы не сможете больше зарегестрироваться на сайте Halfeet";
+
+
+
+//涂鸦页面
+//BanBu_GraffitiController
+"brushSize" = "Размер кисти :";
+"emptySheet" = "Вы уверены, что хотите удалить текущий граффити";
+"sendSheet" = " Вы уверены, что хотите отправить текущий граффити";
+"sendAndSaveImage" = "Отправить и сохранить в альбом";
+"onlySendImage" = "Только отправить";
+"changeBackImage" = " Изменить рисунок?";
+
+/**********************************************/
+//抛绣球
+/**********************************************/
+
+//BanBu_SelectController,抛绣球的选择页面
+"placeLabel" = "One place";
+"moodLabel" = "A diary";
+"fateLabel" = "A fate";
+"throwOneLabel" = "Throw one";
+"myBallLabel" = "My ball";
+//BanBu_SelectPlaceController
+"selectPlaceTitle" = "Target location";
+"setCityLabel" = "Set city";
+"setPlaceLabel" = "Place name";
+"hotPlaces" = "Hot places";
+"cityplaceNil" = "City or place name shall not be empty";
+"placeNULL" = "This place does not exist";
+"huntNotice" = "Searching...";
+//BanBu_ThrowBallController
+"throwBallTitle" = "Throw ball";
+
+"sayBall" = "Wrap your feelings in the ball";
+
+
+"editAlert" = "Whether to give up the edited content";
+"emptyToolItem" = "Empty";
+"finishToolItem" = "Finished";
+"funLabel"= "Camera";
+"funLabel1"= "Album";
+"funLabel2"= "Voice";
+"funLabel3"= "Doodle";
+"funLabel4"= "Location";
+"selectOneway" = "Tip: content of each ball could only contain one of text, photos, album, voice, graffiti and my location.";
+"throwNow"= "Throw right now";
+"editActionSheet" = "Whether to cover the edited content";
+"wordNilNotice" = "No text ";
+"throwAlert" = "Whether to throw ball";
+"throwSuccess" = "Successful in throwing ball!";
+
+//BanBu_MyBallsController
+"myBallTitle" = "My ball";
+/**********************************************/
+
+
+//对话
+/**********************************************/
+"mySay" = "[Я говорю]";
+"talkPicture" = "[фото]";
+"talkLocation" = "[место]";
+"talkSound" = "[Голос]";
+//BanBu_MakeBigMapViewController
+"makebigTitle" = "Подробное место положения";
+/**********************************************/
+//友情提示UIView
+"helpfulTitle" = "Tips";
+"warningLabel" = "При отправке информации такой как ”Порнографии” ”Секса на одну ночь” ”Оружии”,телефон будет заблокирован и вы не сможете больше зарегестрироваться на сайте Halfeet";
+"infoLabel" = "В серьезных случаях, об этом будут оповещены органы общественной безопасности";
+"chat_btn" = "Я понял";
+"sendLocation" = "Не против ли вы отправить координаты своего местоположения";
+"seeMoreMessage" = "Смотреть историю сообщений";
+
+/*************************/
+"copyButton" = "Скопировать";
+"shareButton" = "Транслировать";
+
+"opera" = "Операция";
+"deleteMes" = "Пустой чат";
+"forward" = "Переслать";
+"retransmission" = "Повторить попытку";
+"confomForward" = "Вы хотите заново отправить";
+"confirmDelete" = "Вы действительно хотите удалить пункт сообщения";
+"newsState" = "Доставлено";
+"newsState1" = "читать";
+"newsState2" = "не читал";
+"newsState3" = "Идёт отправка";
+"newsState4" = "Не удалось";
+
+"errcode_fail" = "Не удалось поделиться";
+"errcode_cancel" = "Аннулировать";
+"shareSuccess" = "Успешно";
+"comefromIceBreak" = "От ассистента";
+"comefromtuya" = "С графити";
+
+"noticeNotLog" = "Не вошли в систему, войти";
+"flagTitle" = "Символ";
+"smileTitle" = "Смайлики";
+"addBtn" = "Добавить";
+"locationBtn" = "место";
+"holdtotalk" = "Задержать, говорить";
+"kongAlert" = "Не удается отправить пустое сообщение";
+
+/***************************/
+//表情文字
+"smileItem" = "Драться с монстрами";
+"smileItem1" = "Поморщить щёчки";
+"smileItem2" = "Изменчивый";
+"smileItem3" = "Голодный";
+"smileItem4" = "Счастливый";
+"smileItem5" = "Король песен";
+"smileItem6" = "Нудный";
+"smileItem7" = "Вперёд";
+"smileItem8" = "Удивлённый";
+"smileItem9" = "Милый";
+"smileItem10" = "Жалкий";
+"smileItem11" = "Проходил";
+"smileItem12" = "Властный";
+"smileItem13" = "Сердитый";
+"smileItem14" = "Ищу воспитание";
+"smileItem15" = "Помилование";
+"smileItem16" = "Заигрывать";
+"smileItem17" = "Спать";
+"smileItem18" = "Симпотичный";
+"smileItem19" = "Больно";
+"smileItem20" = "Застенчевый";
+"smileItem21" = "Давление";
+"smileItem22" = "Заговор";
+"smileItem23" = "Моргать";
+"smileItem24" = " Стать богатым";
+"smileItem25" = "Пливать";
+"smileItem26" = "Подорваный";
+"smileItem27" = "Холодно";
+"smileItem28" = "Подиум";
+"smileItem29" = "Учиться";
+"smileItem30" = "Вилять попой";
+"smileItem31" = "Танцевать";
+"smileItem32" = "Гордый";
+"smileItem33" = "Заниматься спортом";
+"smileItem34" = "Сос";
+"smileItem35" = "Иди подальше";
+"smileItem36" = "Gangnam Танец";
+"smileItem37" = " Уходи ";
+"resend"="Ещё раз отправить";
+
+/*****************破冰语*********************/
+
+//BanBu_SearchIceViewController
+"searchIce" = "Чат помощник";
+"searchTextField" = "Ключевые слова";
+"searchIceBtn" = "Поиск";
+"tuijianLabel" = "Ключевые слова";
+"searchkey" = "Поиск-";
+
+"ice_actionSheetButtionTitle" = "Отправить";
+"ice_actionSheetButtionTitle1" = "Отправить в we-chat";
+"ice_actionSheetButtionTitle2" = "Поделиться с друзьями в we-chat";
+
+//BanBu_IceBreakerController
+"ice_textTitle" = "Язык текстовых сообщений";
+//BanBu_IceBreaker_Voice
+"ice_voiceTitle" = "Язык голосовых сообщений";
+//BanBu_icePicController
+"ice_picTitle" = "Картиночный язык";
+
+"scanPic" = "Браузер фото";
+
+//好友圈
+/**********************************************/
+//BanBu_MyFriendViewController
+"friendTitle" = "Блок друзей";
+"fItem" = "По расстоянию";
+"fItem1" = "По времени последнего входа";
+"fItem2" = "По добавлению время";
+"summary_g" = "Обратить внимание";
+"summary_f" = "Кумиры";
+"summary_h" = "Друзья";
+"friendNoticeLabel" = "У вас ещё нету друзей, заводите дружбу с людьми по близости";
+"friendNoticeLabel1" = "У вас ещё кумиров, становитесь кумирами с друзьями";
+"friendNoticeLabel2" = "У вас ещё нету друзей, добавляй людей по близости";
+//BanBu_AddNewFriendViewController
+"andNewFriendTitle" = "Добавить в друзья";
+"searchBtn" = "Поиск";
+"zibarBtn" = "Сканирование двумерного кода";
+"headerAndholder" = "Введите номер его почтового ящика или номер Halfeet";
+"nilNotice" = "Содержание не может быть пустым";
+"selfNotice" = "Сообственный";
+"searchNotice" = "Идёт поиск….";
+"emailError" = "Неверный формат электронной почты";
+"resquesting" = "Предыдущий запрос загружается";
+"readerTitle" = "Сканировать и добавить в друзья";
+/**********************************************/
+
+//我的空间
+/**********************************************/
+
+//BanBu_MySpaceViewController
+"myApp" = "Мои приложения";
+"myCenter" = "Персональный центр";
+"myinfoLabel" = "Персональная информация";
+"systemLabel" = "Настройки системы";
+"dymaicLabel" = "Список обновлений";
+"visitorLabel" = "Гости";
+"helperLabel" = "Помощь";
+//个人资料
+/**********************************************/
+//BanBu_MyProfileViewController
+"editAvatar" = "Изменить фото";
+"profileSection" = "  Основная информация";
+"profileSection1" = " Персональная информация";
+"profileSection2" = "  Информация о доступности";
+"profileSection3" = "  Информация об учетной записи";
+
+"weiboBing" = "Доступно";
+"weiboUnBing" = "Не доступно";
+"reBinding" = "Сделать доступность";
+
+"sinaSheetTitle" = "Twitter";
+"TXSheetTitle" = "Facebook";
+
+"updateAvatarSuccess" = "Фото успешно обновлено";
+"reBindingSuccess" = "Успешно выполнено";
+"updateInfo" = "Обновите данные...";
+"updateAvatar" = "Обновить Фото...";
+
+"bangdingSina" = "Ссоединения сTwitter";
+"bangdingTX" = "Ссоединения с Facebook";
+
+
+//太特别
+"changeInfo" = "Вы внесли изменения в%@, хотите ли сохранить?";
+// 0 section
+
+"s0c0" = "Номер Halfeet";
+
+"s0c1" = "QR code";
+
+"s0c2" = " Личная подпись";
+"s0c2DefaluteValue" = "Пусть люди знают о ваших последних новостях";
+
+//1 section
+
+"s1c0" = "Рост(cm)";
+"s1c1" = "Группа крови";
+"s1c2" = "Вес(кг)";
+
+//2 section
+"s2c0" = "Интересы";
+"s2c0DefaluteValue" = "Интересы";
+"s2c1" = "Часто посещаемые места";
+"s2c1DefaluteValue" = "Часто посещаемые места";
+"s2c2" = "Компания";
+"s2c2DefaluteValue" = "В каких компаниях вы работали";
+"s2c3" = "Профессия";
+"s2c3DefaluteValue" = "Кто вы были по　профессии";
+"s2c4" = "Школа";
+"s2c4DefaluteValue" = "В каких школах вы учились";
+
+
+//3 section
+//################
+"s3c0" = "Sina microblog";
+"s3c1" = "Tencent microblog";
+//##################
+//编辑头像
+/**********************************************/
+//BanBu_PhotoManager
+"addPhoto" = "Добавить фото";
+"changePhoto" = "Заменить или удалить";
+"deletePhoto" = "Удалить фотографию";
+"mustOneImage" = "Пожалуйста зарезервируйте не менее одной фотографии";
+
+
+//职业页面
+//BanBu_WorkViewController
+"workTitle" = "Профессия";
+"workNil" = " Не может быть пустым";
+"workBelong" = "Вся промышленность";
+"workItem" = "Компьютер/Интернет/Связь и коммуникации";
+"workItem1" = "Продукция/Процесс/Производство";
+"workItem2" = "Бизнес/Услуги";
+"workItem3" = "Финансы/Банки/Инвестиции/Страхование";
+"workItem4" = "Культура/Реклама/Медиа";
+"workItem5" = "Развлечения/Искусство/Актёр";
+"workItem6" = "Медицина";
+"workItem7" = "Адвокат/Юрист";
+"workItem8" = "Образование/Обучение";
+"workItem9" = "Гражданское/Учреждения";
+"workItem10" = "Студент";
+//二维码名片页面
+//BanBu_ZibarController
+
+"zibarTitle" = "QR code name card";
+"banbuNum" = "Halfeet account：";
+"descripLabel" = "Scan the above picture and add my Halfeet account";
+/**********************************************/
+//系统设置
+/**********************************************/
+//BanBu_SettingViewController
+"settingTitle" = "Настройки системы";
+"exitBtn" = "Выход";
+"messageMan" = "Управление сообщениями";
+"userNameMan" = "Управление счетами";
+"stealthLabel" = "Неведимый";
+"soundSwitch" = "Звук";
+"newmsgNotice" = "Новые оповещения";
+"soundType" = "Тип звукового сигнала";
+//"stealthDetailLabel" = "";
+
+"locationLabel" = "Услуги по месту расположения";
+"remindLabel" = "Настройки напоминаний";
+"muteLabel" = "Период молчания";
+
+//"muteDetailLabel" = "";
+
+"PWSettingLabel" = "Настройки пароля";
+"blackLabel" = "Черный список";
+"feedBackLabel" = "Обратные мнения";
+"commendForBanbu" = "Оценить Полшага";
+"userHelpr" = "Помощь пользователям";
+
+//BanBu_BlacklistViewController
+
+"blackTitle" = "Черный список";
+"unlockButton" = "Заблокировать";
+
+//BanBu_ChangePWViewController
+
+"changePWTitle" = "Изменить пароль";
+"errorMsg6" = "Пожалуйста, введите настоящий пароль";
+"errorMsg7" = "Пожалуйста, введите новый пароль";
+"changePWNotice" = "Идет обновление……";
+"changeOK" = " Пароль успешно установлен";
+"oldPWLabel" = "Старый пароль";
+"inputOldPW" = "Пожалуйста, введите ваш старый пароль";
+"newPWLabel" = "Новый пароль";
+"conPWLabel" = "Повторить пароль";
+
+/**********************************************/
+//动态一览
+/**********************************************/
+//BanBu_DynamicController
+"dynamicTitle" = "Список друзей";
+"displayVisitRecord" = "Список гостей";
+"displayFriendNews" = "Список друзей";
+"friendNewsNoticeLabel" = "У вас ещё нету друзей в списке";
+"visitRecordNoticeLabel" = "Вас ещё не кто не просматривал, поскорее отправляй новости";
+/**********************************************/
+//帮助
+//BanBu_HelpViewController
+"helpTitle" = "Насчёт программы Полушаг";
+"descripLabel" = "Программа Halfeet является мобильным программным обеспечением связи, поддержка через сеть мобильной связи для отправки голосовых сообщений, видео, изображения и текстов, вы можете найти людей рядом с вами";
+"tipsLabel" = "1)　Общение с людьми рядом с вами\n2)　Добавление в друзья\n3)　Обновления друзей, просмотр друзей";
+/**********************************************/
+//我的应用
+//############
+"trainTitle" = "BJ subway";
+//###########
+
+/***********新版broadcast*********/
+"pictureAndVoiceTitle" = "Фотографии и голосовые сообщения";
+"addAPhoto" = "\nПожалуйста, выберите фото\n\n";
+"timeshortNoticte" = "Пожалуйста, задержите кнопку записи";
+
+"textAndTagsTitle" = "Надписи и заметки";
+"textDescription" = "Пожалуйста, введите текст";
+"share_broadcast" = "Поделиться в";
+"bindNow" = "Сейчас сделать доступ";
+"voiceOrTextNotice" = "аудио или текст заполнить как минимум один ";
+
+"commentcount1" = "Щелкните для просмотра";
+"commentcount2" = "Отзывы…";
+
+"tagTextfield" = "Заметка";
+"tagTextPlaceholder" = "Введите метку, разделенным пробелом";
+"writeSomething" = "Напишите что-то...";
+
+"km500" = "Поиск среди 500 км";
+"km2000" = "Поиск среди 2000 км";
+
+
+// 我的设置里面的
+"longVoice" = "Зажмите кнопку для отправки голосовых комментарий";
+"zan_failed" = "Уже было отправлено";
+"zan_success" = "Успешно отправлено!";
+
+"notific"="Новости оповещения";
+
+"notificChat"="Получать уведомления чата";
+
+"notificFriend"="Получать уведомления о получении друзей";
+
+"jiaweihaoyou" = "Добавить в друзья";
+"kaishiduihua" = "Написать сообщение";
+
+
+"requestFrom"="Я уже принял ваше предложение дружбы, давайте начнём общения прямо сейчас";
+
+"moreTitle" = "Больше информации";
+
+"sexSelect" = "Пол";
+"timeSelect" = "Онлайн время";
+"selectTitle" = "Hастройки";
+
+
+//BanBu_ToseeGifViewController
+
+//"tuyaEdit" = "Save the doodle";
+"tuyaEdit" = "Сохранить редактирования графити";
+
+"tuyaReply" = "Ответить графити";
+"continueEdit" = "Продолжить редактирование";
+"saveToAlum" = "Сохранить в альбом";
+
+/********************/
+//注册和修改资料的分享
+"reginShare" = "Я в сети Halfeet(www.halfeet.com)-заводим друзей и начинаем обшение с незнакомцами";
+"photoShare" = "Я в сети Halfeet(www.halfeet.com)загрузил новое фото";
+"followShare" = "В сети Halfeet(www.halfeet.com)и%@ подружились";
+
+

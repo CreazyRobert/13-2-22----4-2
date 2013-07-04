@@ -77,7 +77,7 @@
     NSString *broadcastPath = [DataCachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@-broadcastdata",MyAppDataManager.useruid]];
     [MyAppDataManager.nearDos addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:broadcastPath]]];
     
-    NSLog(@"%@",MyAppDataManager.nearDos);
+//    NSLog(@"%@",MyAppDataManager.nearDos);
 }
 
 - (void)viewWillDisappear:(BOOL)animated

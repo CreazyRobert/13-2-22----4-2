@@ -26,7 +26,11 @@
 //        _shadowView.backgroundColor = [UIColor yellowColor];
         [self.contentView addSubview:_shadowView];
         [_shadowView release];
-
+        
+        
+        
+        
+        
          bkView = [[UIImageView alloc]initWithFrame:CGRectMake( 0, 0, _shadowView.frame.size.width, _shadowView.frame.size.height)];
         bkView.userInteractionEnabled = YES;
         bkView.image = [[UIImage imageNamed:@"listbg(2).png"] stretchableImageWithLeftCapWidth:2.0 topCapHeight:4.0];
@@ -326,9 +330,8 @@
                     [self.commentView addSubview:_lineView4];
                     [_lineView4 release];
             
-            
-            
-            
+            //拨打电话用的webView
+            phoneCallWebView = [[UIWebView alloc] initWithFrame:CGRectZero];// 这个webView只是一个后台的容易 不需要add到页面上来  效果跟方法二一样 但是这个方法是合法的
         }
       }
     return self;
@@ -343,7 +346,7 @@
 }
 
 -(void)dealloc{
-    
+    [phoneCallWebView dealloc];
     [super dealloc];
     
 }
@@ -392,23 +395,17 @@
     _lineView2.backgroundColor = [UIColor colorWithRed:224.0/255 green:224.0/255 blue:224.0/255 alpha:1.0];
     _lineView3.backgroundColor = [UIColor colorWithRed:224.0/255 green:224.0/255 blue:224.0/255 alpha:1.0];
     _lineView4.backgroundColor = [UIColor colorWithRed:224.0/255 green:224.0/255 blue:224.0/255 alpha:1.0];
-
-   
-    
     if(self.highlighted){
-        
         bkView.layer.shadowOffset = CGSizeMake(0, 0);
         bkView.layer.shadowOpacity = 0.9;
         bkView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_shadowView.bounds].CGPath;
         bkView.layer.shadowColor = [[UIColor cyanColor] CGColor];
-        
     }else{
         bkView.layer.shadowOffset = CGSizeMake(0, 2);
         bkView.layer.shadowOpacity = 0.6;
         bkView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_shadowView.bounds].CGPath;
         bkView.layer.shadowColor = [[UIColor blackColor] CGColor];
- 
-    }
+     }
 
 
 }
@@ -420,7 +417,6 @@
     NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phoneNum]];
     
         
-    UIWebView *phoneCallWebView = [[UIWebView alloc] initWithFrame:CGRectZero];// 这个webView只是一个后台的容易 不需要add到页面上来  效果跟方法二一样 但是这个方法是合法的
     [phoneCallWebView loadRequest:[NSURLRequest requestWithURL:phoneURL]];
     
 }

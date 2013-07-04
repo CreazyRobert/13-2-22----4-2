@@ -16,7 +16,6 @@
 
 @interface BanBu_ReleaseController : UIViewController<UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,BroadcastRecordViewDelegate,WBEngineDelegate,QVerifyWebViewControllerDelegate,UIAlertViewDelegate,UIActionSheetDelegate>{
     UITextView *textView;
-
     BOOL haveAttach;
     NSMutableArray *attachArr;
     BOOL haveSendLocation;

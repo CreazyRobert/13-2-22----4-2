@@ -5,7 +5,7 @@
 //  Created by 来国 郑 on 12-7-26.
 //  Copyright (c) 2012年 17xy. All rights reserved.
 //
-
+//定位服务过程：程序第一次运行开始选择是否允许
 
 #import "AppCommunicationManager.h"
 #import "CJSONSerializer.h"
@@ -89,7 +89,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
     
     // 判断是不是3G Wifi 还是没有网络
     _netStatus=(int)status;
-    NSLog(@"%d",_netStatus);
+//    NSLog(@"%d",_netStatus);
     if (status == NotReachable && !isReach) {
         isReach = YES;
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"network_unavailabel", nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"confirmNotice", nil) otherButtonTitles: nil];
@@ -117,7 +117,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
                 
             }
         }
-        NSLog(@"%d",total);
+//        NSLog(@"%d",total);
         NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",total],@"pushcount",nil];
         [AppComManager getBanBuData:Banbu_Set_User_Pushcount par:dic delegate:self];
         
@@ -279,7 +279,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
     
     jsonfrom = [[jsonfrom dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
     requestUrlStr = [requestUrlStr stringByAppendingString:jsonfrom];
-    NSLog(@"%@----%@",[self getPar:query],requestUrlStr);
+//    NSLog(@"%@----%@",[self getPar:query],requestUrlStr);
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:requestUrlStr]];
     request.delegate = adelegate;
     [request setRequestMethod:@"GET"];
@@ -533,7 +533,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
 
             imageData = UIImageJPEGRepresentation(image, 0.7);
 
-        NSLog(@"%d",imageData.length);
+//        NSLog(@"%d",imageData.length);
         NSString *requestUrlStr = [BanBuHost_File stringByAppendingString:BanBu_Set_User_Avatar];
         NSMutableDictionary *pars = [NSMutableDictionary dictionary];
         [pars setValue:@"y" forKey:@"phone"];
@@ -1121,7 +1121,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
             
             for(NSMutableDictionary *t in MyAppDataManager.talkPeoples)
             {
-                NSLog(@"%@",MyAppDataManager.talkPeoples);
+//                NSLog(@"%@",MyAppDataManager.talkPeoples);
 //                if([[t valueForKey:@"me"]intValue]==1 && [[t valueForKey:KeyStatus] intValue] == ChatStatusSent)
                 //上边的条件是正确的，但是怕有漏网之鱼，放松条件。
                 if([[t valueForKey:@"me"]intValue]==1)
@@ -1151,7 +1151,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
             NSMutableDictionary *subAllMessage=[[[NSMutableDictionary alloc]initWithCapacity:10]autorelease];
             
             [subAllMessage setValue:udlist forKey:@"uidlist"];
-            NSLog(@"%@",udlist);
+//            NSLog(@"%@",udlist);
             NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
             [formatter setLocale:[NSLocale currentLocale]];
             [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -1243,7 +1243,7 @@ static AppCommunicationManager *sharedAppCommunicationManager = nil;
     jsonfrom = [[jsonfrom dataUsingEncoding:NSUTF8StringEncoding] base64EncodedString];
     
     requestUrlStr = [requestUrlStr stringByAppendingString:jsonfrom];
-    NSLog(@"%@",requestUrlStr);
+//    NSLog(@"%@",requestUrlStr);
 
     if(userid){
         _byUserOP = [[MKNetworkOperation alloc] initWithURLString:requestUrlStr params:nil httpMethod:@"GET"];

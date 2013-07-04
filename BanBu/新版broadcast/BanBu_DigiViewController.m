@@ -54,7 +54,7 @@
         _broadcast = [[NSMutableDictionary alloc] initWithDictionary:broadcastDic];
         _showPhotos=[[NSMutableArray alloc]initWithCapacity:10];
 
-        NSLog(@"%@",_broadcast);
+//        NSLog(@"%@",_broadcast);
     }
     return self;
 }
@@ -166,7 +166,7 @@
                 NSString *tagString = [saytext substringWithRange:NSMakeRange(start, end-start)];
                 NSLog(@"%@",tagString);
                 NSArray *tagArray = [tagString componentsSeparatedByString:@" "];
-                NSLog(@"%@",tagArray);
+//                NSLog(@"%@",tagArray);
                 CGFloat height= 0,width = 0;
                 for(int i= 0;i<tagArray.count;i++){
                     NSString *buttonTitle = [NSString stringWithFormat:@"#%@",[tagArray objectAtIndex:i]];
@@ -1211,7 +1211,7 @@
     }
 
     NSDictionary *replyDic = [NSDictionary dictionaryWithDictionary:[replyList objectAtIndex:indexPath.row]];
-    NSLog(@"%@",replyDic);
+//    NSLog(@"%@",replyDic);
     NSDictionary *conDic = [AppComManager getAMsgFrom64String:[replyDic valueForKey:@"mcontent"]];
 
     [cell setAvatar:[replyDic valueForKey:@"uface"]];
@@ -1346,7 +1346,7 @@
                 [_player release],_player = nil;
             }
             NSData *aData = [NSData dataWithContentsOfFile:[AppComManager pathForMedia:[voiceArr lastObject]]];
-            NSLog(@"%@",[AppComManager pathForMedia:[voiceArr lastObject]]);
+//            NSLog(@"%@",[AppComManager pathForMedia:[voiceArr lastObject]]);
             _player = [[AVAudioPlayer alloc]initWithData:aData error:nil];
             _player.delegate = self;
             _player.volume = 1.0;
@@ -1397,7 +1397,7 @@
 #pragma mark - BanBuUploadRequsetDelegate
 
 - (void)banbuUploadRequest:(NSDictionary *)resDic didFinishedWithError:(NSError *)error{
-    NSLog(@"%@",resDic);
+//    NSLog(@"%@",resDic);
     
     self.navigationController.view.userInteractionEnabled = YES;
     [TKLoadingView dismissTkFromView:self.view animated:NO afterShow:0.0];
@@ -1414,7 +1414,7 @@
             NSMutableDictionary *pars = [NSMutableDictionary dictionaryWithCapacity:1];
             [pars setValue:[_broadcast valueForKey:@"actid"] forKey:@"replyid"];
             [pars setValue:abrd forKey:@"says"];
-            NSLog(@"%@",pars);
+//            NSLog(@"%@",pars);
             [AppComManager getBanBuData:BanBu_Reply_Broadcast par:pars delegate:self];
 //            self.navigationController.view.userInteractionEnabled = NO;
             [TKLoadingView showTkloadingAddedTo:self.navigationController.view title:NSLocalizedString(@"sendingNotice", nil) activityAnimated:YES];
@@ -1509,7 +1509,7 @@
 #pragma mark - BanBu_Request
 
 -(void)banbuRequestDidFinished:(NSDictionary *)resDic error:(NSError *)error{
-    NSLog(@"%@",resDic);
+//    NSLog(@"%@",resDic);
 
     self.navigationController.view.userInteractionEnabled = YES;
     [TKLoadingView dismissTkFromView:self.navigationController.view animated:YES afterShow:0.0];
@@ -1542,7 +1542,7 @@
         }
     }
     else if([AppComManager respondsDic:resDic isFunctionData:BanBu_Report_Broadcat]){
-        NSLog(@"%@",resDic);
+//        NSLog(@"%@",resDic);
         if([[resDic valueForKey:@"ok"]boolValue]){
             
             
@@ -1618,7 +1618,7 @@
             {
                 if([broad isKindOfClass:[BanBu_BroadcastTVC class]])
                 {
-                    [broad.tableView reloadSections:[NSIndexSet indexSetWithIndex:self.selectSection] withRowAnimation:UITableViewRowAnimationNone];
+//                    [broad.tableView reloadSections:[NSIndexSet indexSetWithIndex:self.selectSection] withRowAnimation:UITableViewRowAnimationNone];
                     break;
                 }
             }

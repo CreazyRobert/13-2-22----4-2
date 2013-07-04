@@ -9,7 +9,6 @@
 #import "BanBu_GraffitiController.h"
 #import "Canvas2D.h"
 #import "BanBu_ReleaseController.h"
-
 #import "GTMBase64.h"
 #import "AppDataManager.h"
 #import "AppCommunicationManager.h"

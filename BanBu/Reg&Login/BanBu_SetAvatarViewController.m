@@ -361,7 +361,6 @@ int selectIndex = -1;
         
 
         if([[resDic valueForKey:@"ok"]boolValue]){
-
             MyAppDataManager.loginid = [resDic valueForKey:@"loginid"];
             MyAppDataManager.useruid = [resDic valueForKey:@"userid"];
             MyAppDataManager.userAvatar =[resDic valueForKey:@"uface"];

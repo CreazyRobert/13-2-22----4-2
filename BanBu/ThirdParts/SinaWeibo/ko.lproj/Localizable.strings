@@ -1,21 +1,21 @@
 
 
-"发送" = "Send";
+"发送" = "전송";
 
-"关闭" = "Cancel";
+"关闭" = "취소";
 
 "新浪微博" = "Sina Weibo";
 
-"确定" = "OK";
+"确定" = "여기에 입력 ";
 "请输入微博内容" = "Please input here";
 
-"取消" = "Cancel";
+"取消" = "취소";
 
-"登录" = "Log In";
+"登录" = "로그인";
 
-"用户名" = "Username";
+"用户名" = "사용자";
 
-"密码" = "Password";
+"密码" = "암호";
 
 /*******************************************************************************/
 CFBundleDisplayName = "하프피트";
@@ -52,12 +52,12 @@ CFBundleDisplayName = "하프피트";
 "pulldownRefresh" = "아래로 뻗어 업데이트";
 /*************************************/
 //BanBu_AppDelegate
-"luckPeopleTitle" = "주위의 사람";
+"luckPeopleTitle" = "근처 인민";
 "selectTitle" = "공 던지기";
 "broadcastTitle" = "근처 광장";
 "dialogueTitle" = "채팅";
 "myFriendTitle" = "친구";
-"mySpaceTitle" = "홈";
+"mySpaceTitle" = "나의 공간";
 "pinglunNotice" = "당신은 하프 피트의 사용을 선호하는 경우에는　１분만　시간을　내　주십시오！감사합니다！";
 
 //"luckPeopleTitle" = "People nearby";
@@ -198,11 +198,11 @@ CFBundleDisplayName = "하프피트";
 //别人的资料
 //BanBu_PeopleProfileController
 "displayPeopleProfile" = "프로필";
-"displayPeopleNews" = "최근 업데이트";
+"displayPeopleNews" = "최신 뉴스";
 "relationshipLabel" = "상호 관계";
 "writeMessage" = "      대화";
-"addLink" = "      팔로우";
-"delLink" = "      팔로워 삭제";
+"addLink" = "      따라";
+"delLink" = "      팔로 잉 언";
 "pullBlackReport" = "    옵션";
 "friendShip" = "팔로우";
 "friendShip1" = "팬";
@@ -292,13 +292,16 @@ CFBundleDisplayName = "하프피트";
 "editAlert" = "Whether to give up the edited content";
 "sayBall" = "Wrap your feelings in the ball";
 "emptyToolItem" = "Empty";
+
+"selectOneway" = "Tip: content of each ball could only contain one of text, photos, album, voice, graffiti and my location.";
+
 "finishToolItem" = "Finished";
 "funLabel"= "Camera";
 "funLabel1"= "Album";
 "funLabel2"= "Voice";
 "funLabel3"= "Doodle";
 "funLabel4"= "Location";
-"selectOneway" = "Tip: content of each ball could only contain one of text, photos, album, voice, graffiti and my location.";
+
 "throwNow"= "Throw right now";
 "editActionSheet" = "Whether to cover the edited content";
 "wordNilNotice" = "No text ";
@@ -339,7 +342,7 @@ CFBundleDisplayName = "하프피트";
 "confirmDelete" = "메세지의 삭제를 하시겠습니까?";
 "newsState" = " 도착 ";
 "newsState1" = " 읽음 ";
-"newsState2" = " 읽지 않음 ";
+"newsState2" = " 미 읽기";
 "newsState3" = " 전송 중 ";
 "newsState4" = " 실패 ";
 
@@ -359,7 +362,7 @@ CFBundleDisplayName = "하프피트";
 
 /***************************/
 //表情文字
-"smileItem" = "ﾓﾝｽﾀgggw";
+"smileItem" = "몬스터";
 "smileItem1" = "도로";
 "smileItem2" = "다양";
 "smileItem3" = "비웠다";
@@ -505,7 +508,7 @@ CFBundleDisplayName = "하프피트";
 "s2c3" = "직업";
 "s2c3DefaluteValue" = "직업의 종류";
 "s2c4" = "학교";
-"s2c4DefaluteValue" = "あなたは今までどの学校に在籍したことがあります";
+"s2c4DefaluteValue" = "지금까지 어느 학교에 재적한적있습니까";
 
 
 //3 section
@@ -552,20 +555,20 @@ CFBundleDisplayName = "하프피트";
 "exitBtn" = "완료";
 "messageMan" = "뉴스 관리";
 
-"userNameMan" = "Account management";
-"stealthLabel" = "Invisible mode";
-"soundSwitch" = "Sound";
-"newmsgNotice" = "News alert";
-"soundType" = "Tone type";
+"userNameMan" = "계정 관리";
+"stealthLabel" = "숨겨진 모드";
+"soundSwitch" = "소리";
+"newmsgNotice" = "뉴스 알리미";
+"soundType" = "톤 종류";
 //"stealthDetailLabel" = "";
 
-"locationLabel" = "Location-based services";
-"remindLabel" = "Alert settings";
-"muteLabel" = "Silence period";
+"locationLabel" = "위치 확정";
+"remindLabel" = "알림 설정";
+"muteLabel" = "뮤트 기간";
 
 //"muteDetailLabel" = "";
 
-"PWSettingLabel" = "Password setting";
+"PWSettingLabel" = "암호 설정";
 "blackLabel" = "계정 관리";
 "feedBackLabel" = "피드백";
 "commendForBanbu" = " 하프 피트 리뷰에";
@@ -592,17 +595,17 @@ CFBundleDisplayName = "하프피트";
 //动态一览
 /**********************************************/
 //BanBu_DynamicController
-"dynamicTitle" = "Timeline";
-"displayVisitRecord" = "Visitors";
-"displayFriendNews" = "Timeline";
-"friendNewsNoticeLabel" = "No timeline of friends, as you have not added any friends!";
-"visitRecordNoticeLabel" = "No one visit you, release new post right now!";
+"dynamicTitle" = "최근 업데이트";
+"displayVisitRecord" = "방문 기록";
+"displayFriendNews" = "최근 업데이트";
+"friendNewsNoticeLabel" = "아직 친구가 없네요.최근 친구 업데이트도 없습니다!";
+"visitRecordNoticeLabel" = "방문한 사람이 없습니다.투고합시다!";
 /**********************************************/
 //帮助
 //BanBu_HelpViewController
 "helpTitle" = "최근 업데이트";
 "descripLabel" = "하프 피트는 주변사람과 편하게 만나 알아가기 위한 휴대폰 전용 앱이다.가까운 지리적 위치에 따라 음성, SMS, 비디오, 사진 및 텍스트를 주변사람에개 보낼 수 있습니다";
-"tipsLabel" = "1) dialogue with people in the vicinity, \n2) add a friend \n3) Friends Circle updates, browse friends dynamic";
+"tipsLabel" = "1) 주변사람과 대화\n2) 주변 친구를 추가 \n3) 친구의 일상 생활의 업데이트를 상시 알고 우정을 싸아갈수 있습니다";
 /**********************************************/
 //我的应用
 "trainTitle" = "북경 지하철";

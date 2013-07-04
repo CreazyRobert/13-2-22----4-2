@@ -22,6 +22,7 @@
     
     UIButton * _playButton;
     UIImageView *bkView;
+    UIWebView *phoneCallWebView;
 }
 
 @property(nonatomic,assign)id<PlayVoiceDelegate>delegate;

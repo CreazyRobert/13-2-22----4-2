@@ -210,7 +210,7 @@
     [cell setAvatar:VALUE(KeyUface, aTalk)];
     [cell setName:[MyAppDataManager IsInternationalLanguage:VALUE(KeyUname, aTalk)]];
 //    NSLog(@"%@-----%@",VALUE(KeyStime, aTalk),[VALUE(KeyStime, aTalk) substringFromIndex:5]);
-    NSLog(@"%@",aTalk);
+//    NSLog(@"%@",aTalk);
     [cell setLastInfo: VALUE(KeyStime, aTalk)];
     [cell setAge:VALUE(KeyAge, aTalk) sex:[VALUE(KeySex, aTalk) boolValue]];
     [cell setDistance:[MyAppDataManager IsInternationalLanguage:VALUE(KeyDmeter, aTalk)]];
@@ -306,7 +306,8 @@
     else{
 
 //        NSLog(@"%@********************",MyAppDataManager.talkPeoples);
-         
+        
+        NSLog(@"%@",[MyAppDataManager.talkPeoples objectAtIndex:indexPath.row]);
         NSDictionary *userDic = [NSDictionary dictionaryWithDictionary:[MyAppDataManager.talkPeoples objectAtIndex:indexPath.row]];
         
         if([VALUE(KeyUnreadNum, userDic) integerValue]!=0)
@@ -319,6 +320,9 @@
             [MyAppDataManager setUnreadNumber:0 With:[userDic valueForKey:@"userid"]];
         }
         NSMutableArray *blackList=[[NSMutableArray alloc] initWithArray:[[[UserDefaults valueForKey:MyAppDataManager.useruid] valueForKey:@"friendlist"] valueForKey:@"flist"]];
+        
+        
+        
         //判断此人是不是在黑名单，是就不能和他对话
         for(NSDictionary * dic in blackList)
         {
@@ -337,7 +341,7 @@
         }
         else{
             if(_isPush){ //防止页面卡住时，多次点击该cell，会push多个viewcontroller
-                NSLog(@"%@",MyAppDataManager.talkPeoples);
+//                NSLog(@"%@",MyAppDataManager.talkPeoples);
                 //判断未读消息是否超过20条，因为默认只会读取20条记录
                 if([VALUE(KeyUnreadNum, userDic) integerValue]>20){
                     [MyAppDataManager readTalkList:[userDic valueForKey:@"userid"] WithNumber:[VALUE(KeyUnreadNum, userDic) integerValue]];

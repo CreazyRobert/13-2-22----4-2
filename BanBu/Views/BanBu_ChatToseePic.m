@@ -290,7 +290,7 @@
                     
                     NSString *imagePath = [NSTemporaryDirectory() stringByAppendingFormat:@"releaseImage"];
                     UIImage *tempImage = [self.shareArr objectAtIndex:0];
-                    NSLog(@"%@-----%@",tempImage,[self.shareArr objectAtIndex:0]);
+//                    NSLog(@"%@-----%@",tempImage,[self.shareArr objectAtIndex:0]);
                     UIImageView *sendImageView = [[UIImageView alloc]initWithImage:tempImage] ;
                     if(sendImageView.image)
                     {

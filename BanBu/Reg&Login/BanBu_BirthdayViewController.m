@@ -53,6 +53,8 @@
     self.birthdayPicker = datePicker;
     [datePicker addTarget:self action:@selector(dateDidChanged:) forControlEvents:UIControlEventValueChanged];
     datePicker.datePickerMode = UIDatePickerModeDate;
+    NSLocale* locale=[[NSLocale alloc]initWithLocaleIdentifier:[MyAppDataManager getPreferredLanguage]];
+    [datePicker setLocale:locale];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
@@ -64,6 +66,7 @@
 
     NSDate *miniDate = [formatter dateFromString:dateStr];
     datePicker.maximumDate = miniDate;
+    [datePicker setAccessibilityLanguage:@""];
 //    dateStr = [dateStr stringByReplacingCharactersInRange:NSMakeRange(8, 2) withString:[NSString stringWithFormat:@"%d",[[dateStr substringFromIndex:8]intValue]-1]];
 //        NSLog(@"%@",dateStr);
     NSDate *maxDate = [NSDate dateWithTimeInterval:-(24*60*60) sinceDate:miniDate];

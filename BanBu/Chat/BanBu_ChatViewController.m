@@ -1317,8 +1317,6 @@ BOOL isSmileView = NO;
 
 - (void)banBu_SmileView:(BanBu_SmileView *)smileView didInputSmile:(NSString *)inputString isDelete:(BOOL)del type:(int)smile
 {
-
-    
     if(del)
     {
         if([_inputView hasText])
@@ -2421,7 +2419,7 @@ BOOL isSmileView = NO;
         //更新对话列表该人的最后一条消息的内容、时间、状态、来源（自己发的）
         NSMutableDictionary *peoDic = [NSMutableDictionary dictionaryWithDictionary:amsg];
         [peoDic setValue:MyAppDataManager.chatuid forKey:KeyFromUid];
-        NSLog(@"%@",peoDic);
+//        NSLog(@"%@",peoDic);
         [MyAppDataManager setTalkPeopleOne:peoDic];
     }
     
@@ -2475,7 +2473,7 @@ BOOL isSmileView = NO;
 
 - (void)ReconnectOneMsg:(id)MsgData amsg:(NSMutableDictionary *)dictionary
 {
-    NSLog(@"%@",dictionary);
+//    NSLog(@"%@",dictionary);
     NSMutableDictionary *reSend = [NSMutableDictionary dictionary];
     NSArray *mapArr = [NSArray arrayWithObjects:@"text",@"image",@"location",@"sound",@"emi",nil];
     NSDictionary *saysDic = [NSDictionary dictionaryWithObjectsAndKeys:VALUE(KeyContent, dictionary),KeyContent,[mapArr objectAtIndex:[[dictionary valueForKey:KeyType] intValue]],KeyType,[dictionary valueForKey:KeyShowFrom],KeyShowFrom,nil];

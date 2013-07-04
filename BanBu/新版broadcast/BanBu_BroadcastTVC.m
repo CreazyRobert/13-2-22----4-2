@@ -294,18 +294,18 @@ NSInteger selectedRow;
             NSInteger start=[saytext rangeOfString:@"<--"].location+3;
             NSInteger end = [saytext rangeOfString:@"-->"].location;
             cell.sayTextLabel.text = [saytext substringToIndex:start-3];
-            NSLog(@"%@",[saytext substringToIndex:start-3]);
+//            NSLog(@"%@",[saytext substringToIndex:start-3]);
             _textHeight = [cell.sayTextLabel.text sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:CGSizeMake(235, 100) lineBreakMode:NSLineBreakByTruncatingMiddle].height;
             cell.sayTextLabel.frame = CGRectMake(55, 55, 235, _textHeight);
             if([[nearDo objectForKey:@"telno"] length])
             {
-                cell.telButton.frame = CGRectMake(55, 55+_textHeight+15, 150, 30);
+                cell.telButton.frame = CGRectMake(55, 55+_textHeight+15, 180, 50);
                 //                [cell.telButton setBackgroundColor:[UIColor redColor]];
-                [cell.telButton.titleLabel setFont:[UIFont systemFontOfSize:18]];
+                [cell.telButton.titleLabel setFont:[UIFont systemFontOfSize:22]];
                 [cell.telButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
                 //                [cell.telButton.titleLabel setTextColor:[UIColor blackColor]];
                 [cell.telButton setTitle:[nearDo objectForKey:@"telno"] forState:UIControlStateNormal];
-                _textHeight = _textHeight+30;
+                _textHeight = _textHeight+50;
             }
                      
             NSString *tagString = [saytext substringWithRange:NSMakeRange(start, end-start)];
@@ -346,19 +346,19 @@ NSInteger selectedRow;
           
             
             cell.sayTextLabel.text = [conDic objectForKey:@"saytext"];
-             NSLog(@"%d %@",indexPath.row,[conDic objectForKey:@"saytext"]);
+//             NSLog(@"%d %@",indexPath.row,[conDic objectForKey:@"saytext"]);
             _textHeight = [cell.sayTextLabel.text sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:CGSizeMake(235, 100) lineBreakMode:NSLineBreakByTruncatingMiddle].height;
             cell.sayTextLabel.frame = CGRectMake(55, 55, 235, _textHeight);
-            NSLog(@"%@",nearDo);
+//            NSLog(@"%@",nearDo);
             if([[nearDo objectForKey:@"telno"] length])
             {
-                cell.telButton.frame = CGRectMake(55, 55+_textHeight+15, 150, 30);
+                cell.telButton.frame = CGRectMake(55, 55+_textHeight+15, 180, 50);
 //                [cell.telButton setBackgroundColor:[UIColor redColor]];
-                [cell.telButton.titleLabel setFont:[UIFont systemFontOfSize:18]];
+                [cell.telButton.titleLabel setFont:[UIFont systemFontOfSize:22]];
                 [cell.telButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
 //                [cell.telButton.titleLabel setTextColor:[UIColor blackColor]];
                 [cell.telButton setTitle:[nearDo objectForKey:@"telno"] forState:UIControlStateNormal];
-                _textHeight += 30;
+                _textHeight += 50;
             
             }
         }
@@ -1147,7 +1147,6 @@ NSInteger selectedRow;
         farDemeter = @"2000000";
     }
     [self setRefreshing];
-    
 }
 
 @end

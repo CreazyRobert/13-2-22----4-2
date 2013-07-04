@@ -438,7 +438,7 @@
 {
     //    //NSLog(@"%@",[imageArr objectAtIndex:0]);
     //    MWPhoto *mwPhoto = [MWPhoto photoWithImage:[sender object]];
-    NSLog(@"%@",dataArr);
+//    NSLog(@"%@",dataArr);
     if(dataArr.count){
         [dataArr removeAllObjects];
     }

@@ -159,7 +159,7 @@
 
         [halfeetLoginButton setTitle:@"アカウントを持っている" forState:UIControlStateNormal];
 
-    }else if([langauage isEqual:@"en"]){
+    }else {
         
         [halfeetLoginButton setTitle:@"I have a account" forState:UIControlStateNormal];
 
@@ -370,6 +370,8 @@
     NSMutableDictionary *loginDic = [NSMutableDictionary dictionary];
     [loginDic setValue:_userName.text forKey:@"email"];
     [loginDic setValue:_userpw.text forKey:@"pass"];
+    NSLog(@"%f %f",AppLocationManager.curLocation.latitude*1000000,AppLocationManager.curLocation.longitude*1000000);
+    
     [loginDic setValue:[NSString stringWithFormat:@"%.f",AppLocationManager.curLocation.latitude*1000000] forKey:@"plat"];
     [loginDic setValue:[NSString stringWithFormat:@"%.f",AppLocationManager.curLocation.longitude*1000000] forKey:@"plong"];
 //    BanBu_AppDelegate *delegate = (BanBu_AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -512,8 +514,8 @@
 //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     }
-    
-    
+#warning 取消选中
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;// 取消选中
     return cell;
 }
 

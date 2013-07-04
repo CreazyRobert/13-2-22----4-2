@@ -44,6 +44,7 @@
     
     self.tableView.backgroundColor = [UIColor colorWithRed:255.0/255 green:250.0/255 blue:240.0/255 alpha:1.0];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+      /*
 //    self.tableView.showsVerticalScrollIndicator = NO;
 
 //    UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 270, 44)];
@@ -55,7 +56,7 @@
 //    sortButton.titleLabel.font = [UIFont systemFontOfSize:14];
 //    [sortButton addTarget:self action:@selector(sort:) forControlEvents:UIControlEventTouchUpInside];
 //    [leftView addSubview:sortButton];
-    /*
+  
 	// Image And title
 //	NSArray *titleItems = [NSArray arrayWithObjects:NSLocalizedStringFromTable(@"附近的人", @"XXXX...这就不写了", nil),NSLocalizedStringFromTable(@"附近广播", @"XXXX...这就不写了", nil), nil];
     NSArray *titleItems = [NSArray arrayWithObjects:NSLocalizedString(@"titleItem", nil),NSLocalizedString(@"titleItem1", nil), nil];
@@ -127,6 +128,8 @@
     
     NSString *listPath = [DataCachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@-nearbuddysdata",MyAppDataManager.useruid]];
     [MyAppDataManager.nearBuddys addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:listPath]]];
+    NSLog(@"%@",MyAppDataManager.nearBuddys);
+
 
     NSString *contentPath = [DataCachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@-nearbuddydatacopy",MyAppDataManager.useruid]];
 //    NSLog(@"%@",[NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:contentPath]]);
@@ -689,7 +692,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SS"];
 //    NSString *stime = [formatter stringFromDate:[NSDate date]];
 //    NSLog(@"1111111%@",stime);
-    
+    NSLog(@"%@",resDic);
     self.navigationController.view.userInteractionEnabled = YES;
     [TKLoadingView dismissTkFromView:self.view animated:YES afterShow:0.0];
     if(error)
@@ -729,7 +732,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
             
             //去除黑名单的人
             NSMutableArray *blacklistArr = [NSMutableArray arrayWithCapacity:0];
-            
+            NSLog(@"%@",[UserDefaults valueForKey:MyAppDataManager.useruid]);
+
             NSArray *flistArr = [NSArray arrayWithArray:[[[UserDefaults valueForKey:MyAppDataManager.useruid] valueForKey:@"friendlist"] valueForKey:@"flist"]];
             //            NSLog(@"%@",flistArr);
             for(NSDictionary *blackDic in flistArr){
@@ -742,7 +746,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
             if(_isLoadingRefresh)
             {
                 [MyAppDataManager.nearBuddys removeAllObjects];
-                 //对名字和话，进行替换后，在存储
+                 //对名字和话，进行替换后 ，在存储
                 for(int i=0;i<[[resDic valueForKey:@"list"]count];i++)
                 {
                     
@@ -892,7 +896,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
                 [MyAppDataManager.nearBuddys addObjectsFromArray:sortedArray];
                  */
                 
-            }
+             }
             
       
              

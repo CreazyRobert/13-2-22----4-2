@@ -32,6 +32,7 @@ static BanBu_LocationManager *sharedLocationManager = nil;
         _locationManager.distanceFilter = 10.0f;
         CGPoint point = CGPointFromString([[NSUserDefaults standardUserDefaults] valueForKey:Location]);
         _curLocation = CLLocationCoordinate2DMake(point.x, point.y);
+        NSLog(@"%f %f",_curLocation.longitude,_curLocation.latitude);
         if(!_curLocation.latitude){
             NSString *langauage=[[MyAppDataManager  getPreferredLanguage]substringToIndex:2];
             NSLog(@"%@",langauage);
@@ -51,9 +52,10 @@ static BanBu_LocationManager *sharedLocationManager = nil;
                 _curLocation = CLLocationCoordinate2DMake(40.713027,-74.005237);
             }
         }
+//        _curLocation = CLLocationCoordinate2DMake(40.147301, 116.285004);//北京
 //           _curLocation = CLLocationCoordinate2DMake(40.147976,116.286313);
 
-//        _curLocation = CLLocationCoordinate2DMake(35.666527,139.747182);
+//        _curLocation = CLLocationCoordinate2DMake(35.666527,139.747182);//日本
 //        _curLocation = CLLocationCoordinate2DMake(40.771275,-73.947170);
 
         

@@ -1940,6 +1940,10 @@
 		84767E9015DB7D7800F09430 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84F310AC15ABD8CA004147E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		84F310E715AC0B09004147E1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE9A34541783F778004F3E51 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CE9A34551783F778004F3E51 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CE9A345617840D26004F3E51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE9A345717840D27004F3E51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEF23FF51782ABFF00A2FD07 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF23FF61782ABFF00A2FD07 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3815,6 +3819,7 @@
 				3D8B781315A5C8CF0067CF32 /* Sources */,
 				3D8B781415A5C8CF0067CF32 /* Frameworks */,
 				3D8B781515A5C8CF0067CF32 /* Resources */,
+				CED10FDF1784F8180028876C /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -3845,6 +3850,7 @@
 				"zh-Hant",
 				ja,
 				ko,
+				ru,
 			);
 			mainGroup = 3D8B780C15A5C8CE0067CF32;
 			productRefGroup = 3D8B781815A5C8CF0067CF32 /* Products */;
@@ -4413,6 +4419,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CED10FDF1784F8180028876C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate  \nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ] || [ \"${PLATFORM_NAME}\" == \"ipados\" ]; then  \n/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";  \ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"  \nfi ",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D8B781315A5C8CF0067CF32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -4667,6 +4691,8 @@
 				047EBB0F16562BE3004536F2 /* zh-Hans */,
 				047EBB1016562BE5004536F2 /* ja */,
 				CEF23FF61782ABFF00A2FD07 /* ko */,
+				CE9A34551783F778004F3E51 /* zh-Hant */,
+				CE9A345717840D27004F3E51 /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -4678,6 +4704,8 @@
 				3DD8288D1604EA4200FE507D /* zh-Hans */,
 				0405FC64169ACFA600C8CB43 /* ja */,
 				CEF23FF51782ABFF00A2FD07 /* ko */,
+				CE9A34541783F778004F3E51 /* zh-Hant */,
+				CE9A345617840D26004F3E51 /* ru */,
 			);
 			name = Localizable.strings;
 			path = ThirdParts/SinaWeibo;
@@ -4720,7 +4748,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yuying xiao (HT7J25WPT2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
@@ -4738,7 +4766,7 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CFEA3A5B-9830-4B40-88A4-124F3C647116";
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4802,8 +4830,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: yuying xiao (HT7J25WPT2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yuying xiao (HT7J25WPT2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
@@ -4821,8 +4849,8 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E8C0F3E6-0423-462F-B974-F24D63A80266";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CFEA3A5B-9830-4B40-88A4-124F3C647116";
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4833,7 +4861,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yuying xiao (HT7J25WPT2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
@@ -4851,6 +4879,7 @@
 				);
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CFEA3A5B-9830-4B40-88A4-124F3C647116";
 				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};

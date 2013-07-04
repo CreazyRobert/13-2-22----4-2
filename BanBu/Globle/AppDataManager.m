@@ -157,17 +157,44 @@ static AppDataManager *sharedAppDataManager = nil;
         
         return nil;
     }
-    
+  
+    NSMutableDictionary *chineseDictionary;
+//    NSLog(@"%@",MyAppDataManager.languageDictionary);
     if([langauage isEqual:@"zh-Hans"])
     {
-        NSMutableDictionary *chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"cn"];
-        
+        chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"cn"] ;
+    }
+    else if ([langauage isEqual:@"ja"])
+    {
+        chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"jp"] ;
+    }
+    else if([langauage isEqual:@"kr"])
+    {
+        chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"kr"] ;
+    }
+    else if([langauage isEqual:@"zh-Hant"])
+    {
+        chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"hk"] ;
+    }
+    else if([langauage isEqual:@"ru"])
+    {
+        chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"ru"];
+    }
+    else
+    {
+        chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"en"] ;
+    }
+//    NSLog(@"%@",chineseDictionary);
         NSArray *keyArr=[chineseDictionary allKeys];
-        
+//        if(keyArr!=nil)
+//        {
+//        NSLog(@"%@",chineseDictionary);
+//        NSLog(@"@@@@@@@@@%@",keyArr);
+//        NSLog(@"#########%@",input);
+//        }
         for(int i=0;i<[keyArr count];i++)
         {
             NSString *key=[keyArr objectAtIndex:i];
-            
             NSRange range=[input rangeOfString:key];
             
             if(range.length==0)
@@ -184,45 +211,7 @@ static AppDataManager *sharedAppDataManager = nil;
         return outstring;
 //        return [chineseDictionary valueForKey:input];
         
-    }
-    else if ([langauage isEqual:@"ja"])
-    {
-        
-        NSMutableDictionary *chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"jp"];
-        
-        NSArray *keyArr=[chineseDictionary allKeys];
-        
-        for(int i=0;i<[keyArr count];i++)
-        {
-            NSString *key=[keyArr objectAtIndex:i];
-            
-            NSString *value=[chineseDictionary valueForKey:[keyArr objectAtIndex:i]];
-            
-            input=[input stringByReplacingOccurrencesOfString:key withString:value];
-            
-        }
-        
-        NSString *outstring=[NSString stringWithString:input];
-        return outstring;
-        
-    }
-    else
-    {
-        NSMutableDictionary *chineseDictionary=[[MyAppDataManager.languageDictionary objectForKey:@"language"] objectForKey:@"en"];
-        
-        NSArray *keyArr=[chineseDictionary allKeys];
-        for(int i=0;i<[keyArr count];i++)
-        {
-            NSString *key=[keyArr objectAtIndex:i];
-            
-            NSString *value=[chineseDictionary valueForKey:[keyArr objectAtIndex:i]];
-            input=[input stringByReplacingOccurrencesOfString:key withString:value];
-        }
-        NSString *outstring=[NSString stringWithString:input];
-        return outstring;
-        
-    }
-    
+      
     
 }
 
@@ -230,12 +219,14 @@ static AppDataManager *sharedAppDataManager = nil;
 {
     
     NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    
     NSArray* languages = [defs objectForKey:@"AppleLanguages"];
+//    NSLog(@"%@",languages);
     NSString* preferredLang = [languages objectAtIndex:0];
     return preferredLang;
 }
 
-/*
+/*q
 // 这是返回字符串
 const  static  NSString* (^e_tt)(NSString *)=^(NSString *str)
 {
@@ -412,7 +403,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
 
 //不存在该人，就插入表内
 -(BOOL)initTalkPeopleOne:(NSDictionary *)people{
-    NSLog(@"疯了啊%@",people);
+//    NSLog(@"疯了啊%@",people);
     if(![_dataBase goodConnection])
         [_dataBase open];
     
@@ -432,7 +423,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         NSDictionary *amsgDic = [NSDictionary dictionaryWithDictionary:[[people valueForKey:@"msglist"] lastObject]];
         
         NSDictionary *saysDic=[AppComManager getAMsgFrom64String:[amsgDic valueForKey:KeySays]];
-        NSLog(@"%@",saysDic);
+//        NSLog(@"%@",saysDic);
         
         NSString *facelistJson = [[CJSONSerializer serializer] serializeArray: VALUE(KeyFacelist, people)];
         BOOL isMan=[VALUE(KeyGender, people)isEqual:@"m"];
@@ -493,7 +484,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
                   VALUE(KeyMe, people),//  keyme ：别人发的是0；我发的是1
                   VALUE(KeyStatus, people)   //ChatStatus：ChatStatusNone
                   ];
-        NSLog(@"要不要整儿高啊%@",[saysDic valueForKey:KeyContent]);
+//        NSLog(@"要不要整儿高啊%@",[saysDic valueForKey:KeyContent]);
         if(!s)
         {
             NSLog(@"database action error:%@",[[_dataBase lastError] description]);
@@ -516,7 +507,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
     BOOL isMan=[VALUE(KeyGender, dataDic)isEqual:@"m"];
     NSArray *mapArr = [NSArray arrayWithObjects:@"text",@"image",@"location",@"sound",@"emi",nil];
     NSInteger msgType = [mapArr indexOfObject:VALUE(KeyType, saysDic)];
-    NSLog(@"%d",msgType);
+//    NSLog(@"%d",msgType);
     NSString *query = [NSString stringWithFormat:@"UPDATE %@ SET uface=?,pname=?,oldyears=?,sex=?,content=?,stime=?,unreadnum= unreadnum + ?,type=?,company=?,hbody=?,jobtitle=?,liked=?,lovego=?,sayme=?,school=?,sstar=?,wbody=?,xblood=?,ltime=?,dmeter=?,facelist=?,me=?,status=? WHERE userid=?",TALKPEOPLES];
 
     BOOL s = [_dataBase executeUpdate:query,
@@ -628,7 +619,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         NSMutableDictionary *changPeople = [NSMutableDictionary dictionaryWithDictionary:people];
         [changPeople setValue:[NSNumber numberWithBool:NO] forKey:KeyMe];
         [changPeople setValue:[NSNumber numberWithInteger:ChatStatusNone] forKey:KeyStatus];
-        NSLog(@"%@",changPeople);
+//        NSLog(@"%@",changPeople);
         [self initTalkPeopleOne:changPeople];
 
 //        BOOL isUpdate = [self initTalkPeopleOne:changPeople];
@@ -680,7 +671,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
 }
 
 -(void)writeToDialogOne:(NSDictionary *)aMsg andToUid:(NSString *)touid{
-    NSLog(@"%@",aMsg);
+//    NSLog(@"%@",aMsg);
     [self initDialogDB:touid];
     NSString *tableName = [self getTableNameForUid:touid];
     NSString *dialogQuery = [NSString stringWithFormat:@"INSERT INTO %@ (chatid,ID,content,me,status,type,height,stime,showtime,uface,mediastatus,msgfrom) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",tableName];
@@ -915,7 +906,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
     }else if([[statuDic valueForKey:@"status"] isEqualToString:@"none"]){
         chatstatus = ChatStatusNone;
     }
-    NSLog(@"----一条的消息状态%d",chatstatus);
+//    NSLog(@"----一条的消息状态%d",chatstatus);
     //ChatStatusSent= 2；
     NSString *talkPeopleOneQuery = [NSString stringWithFormat:@"UPDATE %@ SET status=? WHERE (userid=?)",TALKPEOPLES];
 
@@ -1113,12 +1104,12 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         [_dataBase open];
     
     NSString *query = [NSString stringWithFormat:@"SELECT MAX(chatid) AS _value FROM %@",[MyAppDataManager getTableNameForUid:chatuid]];
-    NSLog(@"%@",query);
+//    NSLog(@"%@",query);
     FMResultSet *rs = [_dataBase executeQuery:query];
     NSString * chatid = nil;
 
     while ([rs next]) {
-        NSLog(@"%@",[rs stringForColumn:@"_value"]);
+//        NSLog(@"%@",[rs stringForColumn:@"_value"]);
         if([[rs stringForColumn:@"_value"]length]){
             
             chatid =[NSString stringWithFormat:@"%@",[rs stringForColumn:@"_value"]];
@@ -1127,7 +1118,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
             }else{
                 NSArray *arr = [NSArray arrayWithArray:[chatid componentsSeparatedByString:@"."]];
                 chatid = [NSString stringWithFormat:@"%@.%d",[arr objectAtIndex:0],[[arr objectAtIndex:1] intValue]+1];
-                NSLog(@"%@",arr);
+//                NSLog(@"%@",arr);
             }
             NSLog(@"行不行啊，%@",chatid);
         }
@@ -1373,6 +1364,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         
         [_dialogs removeAllObjects];
         NSMutableArray *orialArr = [NSMutableArray array];
+
         while ([rs next]) {
             NSDictionary *amsg = [NSDictionary dictionaryWithObjectsAndKeys:
 
@@ -1390,6 +1382,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
                                   
                                   [rs stringForColumn:KeyShowFrom],                                 KeyShowFrom,
                                   nil];
+            
             [orialArr addObject:amsg];
 //            NSLog(@"%@",amsg);
         }
@@ -1404,7 +1397,6 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         FMResultSet *rs = [_dataBase executeQuery:query];
         [_talkPeoples removeAllObjects];
         while ([rs next]) {
-
             NSInteger type = [rs intForColumn:KeyType];
             NSString *str1;
             if(type == ChatCellTypeText||type == ChatCellTypeEmi)
@@ -1415,7 +1407,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
             {
                 NSArray *mapArr = [NSArray arrayWithObjects:@"text",NSLocalizedString(@"talkPicture", nil),NSLocalizedString(@"talkLocation", nil),NSLocalizedString(@"talkSound", nil),@"emi",nil];
 //                NSLog(@"%d----%@",type,str1);
-                if(![[rs stringForColumn:KeyLasttalk] isEqualToString:@""])
+                if(![[rs stringForColumn:KeyLasttalk] isEqualToString:@""]&&[rs stringForColumn:KeyLasttalk])
                 {
                     str1 = [NSString stringWithFormat:@"%@",[mapArr objectAtIndex:type]];
                 }else{
@@ -1467,7 +1459,6 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
             [_talkPeoples addObject:dic];
             
         }
-
     }
  
 
@@ -1569,7 +1560,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
 {
     //先更新数据库，再更新数据源，最后更新界面，应该都是这个套路吧
     // if([[_appChatController.profile valueForKey:KeyFromUid] isEqualToString:[resDic valueForKey:KeyUid]]) 它的作用就是：如果当前页面不是原来那个人了，就不需要更新数据源了和刷新当前界面。
-    NSLog(@"%@---%@",resDic,error);
+//    NSLog(@"%@---%@",resDic,error);
     if(error)
     {
         if(![error.domain isEqualToString:BanBuDataformatError] && [[error.userInfo valueForKey:@"fc"] isEqualToString:BanBu_SendMessage_To_Server])
@@ -1758,10 +1749,10 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         else if([AppComManager respondsDic:resDic isFunctionData:BanBu_SendMessage_To_Server])
         {
             NSLog(@"zoulejic");
-            NSLog(@"%@",resDic);
+//            NSLog(@"%@",resDic);
              NSDictionary *statuDic =  [NSDictionary dictionaryWithObjectsAndKeys:@"s",@"status",[resDic valueForKey:@"touid"],@"touid",[resDic valueForKey:KeyChatid],KeyChatid,[NSNumber numberWithInteger:MediaStatusNormal],KeyMediaStatus, nil];
 
-            NSLog(@"%@",statuDic);
+//            NSLog(@"%@",statuDic);
             [self setStatusOfOne:statuDic];
     
             //判断这条消息，还是这个人的嘛（self.dialogs可能已改变）
@@ -1806,7 +1797,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
     
     NSMutableDictionary *sendDic = [NSMutableDictionary dictionaryWithDictionary:aMsg];
     [sendDic setValue:uid forKey:@"touid"];
-    NSLog(@"%@",sendDic);
+//    NSLog(@"%@",sendDic);
     
     [AppComManager getBanBuData:BanBu_SendMessage_To_Server par:sendDic delegate:self];
 }
@@ -1822,7 +1813,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
     
     // 这是发送的嘛啊？
     
-    NSLog(@"%@",sendDic);
+//    NSLog(@"%@",sendDic);
     
     [AppComManager getBanBuData:BanBu_SendMessage_To_Server par:sendDic delegate:self];
 }
@@ -1841,7 +1832,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
  
 - (void)banbuRequestNamed:(NSString *)requestname uploadDataProgress:(float)progress
 {
-    NSLog(@"%@",requestname);
+//    NSLog(@"%@",requestname);
 //    if(self.appChatController)
 //    {
 //        NSInteger row = [[[requestname componentsSeparatedByString:@"-"] objectAtIndex:0] integerValue];
@@ -1893,7 +1884,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
         }
         return;
     }
-    NSLog(@"%@-----",resDic);
+//    NSLog(@"%@-----",resDic);
 
     if([[resDic valueForKey:@"ok"] boolValue])
     {
@@ -1927,7 +1918,7 @@ NSString *(^bindLink)(NSString *,NSString *)=^(NSString *itemName,NSString *UID)
 - (void)banbuDownloadRequest:(NSDictionary *)resDic didFinishedWithError:(NSError *)error
 {
 
-    NSLog(@"%@",resDic);
+//    NSLog(@"%@",resDic);
     if(error)
     {
  
